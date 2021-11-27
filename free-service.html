@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Бесплатный сервис -->
+
+    <style>
+      .section-free-service {
+        position: relative;
+        padding: 50px 0;
+        background-color: #fbfbfb;
+      }
+
+      .free-service__title {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 40px;
+
+        font-size: 28px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #2c2c2d;
+      }
+
+      .free-service__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 40px;
+      }
+
+      .free-service__item {
+        flex-basis: calc(16.666% - 40px);
+        text-align: center;
+
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      .free-service__item img {
+        width: 100%;
+      }
+
+      .icon-text-item__icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+      }
+
+      .icon-text-item__icon.icon-text-item__icon_trans {
+        background-color: transperent;
+        padding: 0;
+      }
+
+      .icon-text-item__text {
+        margin-top: 15px;
+
+        font-weight: bold;
+      }
+
+      .free-service__body h3 {
+        font-weight: bold;
+        color: #000;
+      }
+      .free-service__body p {
+        font-weight: normal;
+        color: #000;
+      }
+      .free-service__body span {
+        display: inline-block;
+        position: relative;
+        margin-top: auto;
+        color: #000;
+      }
+
+      .free-service__item div:last-child {
+        margin-top: auto;
+      }
+
+      .free-service__body span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #e28686;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .free-service__offer {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 0px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .main-btn {
+        display: none;
+        max-width: 340px;
+        background-color: #c50000;
+        color: #fff;
+        padding: 15px 10px;
+        border-radius: 20px;
+      }
+
+      .free-service__offer .main-btn {
+        margin-top: 20px;
+      }
+      @media (max-width: 768px) {
+        .free-service__body {
+          gap: 30px;
+          padding: 0 15px;
+        }
+
+        .free-service__item {
+          flex-basis: calc(50% - 30px);
+        }
+      }
+      @media (max-width: 550px) {
+        .free-service__body {
+          gap: 40px;
+        }
+
+        .free-service__item {
+          flex-basis: calc(100% - 20px);
+        }
+
+        .free-service span {
+            display: inline-block !important;
+        }
+      }
+    </style>
+
+    <section class="section-free-service">
+      <div class="widget-wrapper intec-content intec-content-visible">
+        <div class="free-service">
+          <h2 class="free-service__title">
+            <span style="color: #c50000">Бесплатный</span> сервис для наших
+            клиентов
+          </h2>
+          <div class="free-service__body">
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/1.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>Бесплатный выезд на замер</h3>
+              <p>Выезд замерщика с образцами материала и каталогом фурнитуры</p>
+              <div>
+                <span> от 1000₽ </span>
+              </div>
+            </div>
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/2.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>
+                Бесплатный дизайн <br />
+                проект
+              </h3>
+              <p>
+                Замеришик - дизайнер прорисует эскиз вашего встроенного шкафа
+              </p>
+              <div>
+                <span> от 3000₽ </span>
+              </div>
+            </div>
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/3.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>
+                Бесплатная доставка <br />
+                по Москве
+              </h3>
+              <p>Доставим ваш встроенный шкаф-купе в удобное для вас время</p>
+              <div>
+                <span> от 2500₽ </span>
+              </div>
+            </div>
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/4.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>
+                Бесплатный подъем <br />
+                на этаж
+              </h3>
+              <p>
+                Ручной подъем мебельных деталей профессиональными грузчиками
+              </p>
+              <div>
+                <span> от 3000₽ </span>
+              </div>
+            </div>
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/5.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>
+                Бесплатная сборка <br />
+                шкафа
+              </h3>
+              <p>
+                Сборка встроенных шкафов-купе специализированными монтажниками
+              </p>
+              <div>
+                <span> от 4300₽ </span>
+              </div>
+            </div>
+            <div class="free-service__item icon-text-item">
+              <div class="icon-text-item__icon icon-text-item__icon_trans">
+                <img
+                  src="https://modus-style.ru/bitrix/templates/universelite_s1/images/blocks/free-service/6.png"
+                  alt="icon"
+                />
+              </div>
+
+              <h3>
+                Бесплатный клининг <br />
+                после сборки
+              </h3>
+              <p>После установки встроенного шкафа проведем уборку</p>
+              <div>
+                <span> от 1200₽ </span>
+              </div>
+            </div>
+          </div>
+          <div class="free-service__offer">
+            <div>
+              Наши клиенты экономят:
+              <span style="color: #c50000">От 15.000 рублей</span>
+
+              <div class="main-btn" data-action="forms.call.open">
+                Получить выгоду
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -289,6 +289,47 @@
           </div>
         </div>
       </div>
+
+      <div style="text-align: center;">
+        <button
+          style="
+            position: relative;
+            z-index: 2;
+            margin-top: 30px;
+          "
+          class="main-btn"
+          data-action="forms.call.open"
+        >
+          <span>Заказать звонок</span>
+        </button>
+      </div>
     </section>
+
+    <script>
+      (function ($) {
+        $(document).on("ready", function () {
+          var root = $(".section-workflow-order");
+          var button = $('[data-action="forms.call.open"]', root);
+
+          button.on("click", function () {
+            universe.forms.show({
+              id: 1,
+              template: ".default",
+              parameters: {
+                AJAX_OPTION_ADDITIONAL:
+                  "i-19-intec-universe-main-footer-template-1-m71abLTUTSkt_FORM_CALL",
+                CONSENT_URL: "/company/consent/",
+              },
+              settings: { title: "Заказать звонок" },
+            });
+
+            if (window.yandex && window.yandex.metrika) {
+              window.yandex.metrika.reachGoal("forms.open");
+              window.yandex.metrika.reachGoal("forms.1.open");
+            }
+          });
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>

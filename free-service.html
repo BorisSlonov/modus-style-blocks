@@ -104,16 +104,18 @@
         font-size: 18px;
         margin-top: 0px;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
       }
 
       .main-btn {
-        display: none;
+        display: inline-block;
         max-width: 340px;
         background-color: #c50000;
         color: #fff;
-        padding: 15px 10px;
+
         border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .free-service__offer .main-btn {
@@ -121,7 +123,7 @@
       }
       @media (max-width: 768px) {
         .free-service__body {
-          gap: 30px;
+          gap: 40px;
           padding: 0 15px;
         }
 
@@ -131,15 +133,21 @@
       }
       @media (max-width: 550px) {
         .free-service__body {
-          gap: 40px;
+          gap: 30px;
+        }
+
+        .free-service__body h3 {
+          margin-top: 15px;
+          margin-bottom: 15px;
         }
 
         .free-service__item {
           flex-basis: calc(100% - 20px);
         }
-
         .free-service span {
-            display: inline-block !important;
+          display: inline-block !important;
+          max-width: 100px;
+          margin: 0 auto;
         }
       }
     </style>
@@ -163,7 +171,7 @@
               <h3>Бесплатный выезд на замер</h3>
               <p>Выезд замерщика с образцами материала и каталогом фурнитуры</p>
               <div>
-                <span> от 1000₽ </span>
+                <span> от 1000&#8381; </span>
               </div>
             </div>
             <div class="free-service__item icon-text-item">
@@ -182,7 +190,7 @@
                 Замеришик - дизайнер прорисует эскиз вашего встроенного шкафа
               </p>
               <div>
-                <span> от 3000₽ </span>
+                <span> от 3000&#8381; </span>
               </div>
             </div>
             <div class="free-service__item icon-text-item">
@@ -199,7 +207,7 @@
               </h3>
               <p>Доставим ваш встроенный шкаф-купе в удобное для вас время</p>
               <div>
-                <span> от 2500₽ </span>
+                <span> от 2500&#8381; </span>
               </div>
             </div>
             <div class="free-service__item icon-text-item">
@@ -218,7 +226,7 @@
                 Ручной подъем мебельных деталей профессиональными грузчиками
               </p>
               <div>
-                <span> от 3000₽ </span>
+                <span> от 3000&#8381; </span>
               </div>
             </div>
             <div class="free-service__item icon-text-item">
@@ -237,7 +245,7 @@
                 Сборка встроенных шкафов-купе специализированными монтажниками
               </p>
               <div>
-                <span> от 4300₽ </span>
+                <span> от 4300&#8381; </span>
               </div>
             </div>
             <div class="free-service__item icon-text-item">
@@ -254,22 +262,51 @@
               </h3>
               <p>После установки встроенного шкафа проведем уборку</p>
               <div>
-                <span> от 1200₽ </span>
+                <span> от 1200&#8381; </span>
               </div>
             </div>
           </div>
           <div class="free-service__offer">
             <div>
-              Наши клиенты экономят:
-              <span style="color: #c50000">От 15.000 рублей</span>
-
-              <div class="main-btn" data-action="forms.call.open">
-                Получить выгоду
+              <div>
+                Наши клиенты экономят:
+                <span style="color: #c50000">От 15.000 рублей</span>
               </div>
+
+              <button class="main-btn" data-action="forms.call.open">
+                <span>Получить выгоду</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      (function ($) {
+        $(document).on("ready", function () {
+          var root = $(".section-free-service");
+          var button = $('[data-action="forms.call.open"]', root);
+
+          button.on("click", function () {
+            universe.forms.show({
+              id: 1,
+              template: ".default",
+              parameters: {
+                AJAX_OPTION_ADDITIONAL:
+                  "i-19-intec-universe-main-footer-template-1-m71abLTUTSkt_FORM_CALL",
+                CONSENT_URL: "/company/consent/",
+              },
+              settings: { title: "Заказать звонок" },
+            });
+
+            if (window.yandex && window.yandex.metrika) {
+              window.yandex.metrika.reachGoal("forms.open");
+              window.yandex.metrika.reachGoal("forms.1.open");
+            }
+          });
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>
